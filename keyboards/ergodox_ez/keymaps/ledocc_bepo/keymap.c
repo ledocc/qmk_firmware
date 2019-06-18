@@ -14,7 +14,7 @@ enum custom_keycodes {
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 /* Keymap 0: Basic layer
  *
- * ,--------------------------------------------------.           ,--------------------------------------------------.
+s * ,--------------------------------------------------.           ,--------------------------------------------------.
  * | Esc    |   "  |   «  |   »  |   (  |   )  |  $   |           |  %   |   @  |   +  |   -  |   /  |   *  |   =    |
  * |--------+------+------+------+------+-------------|           |------+------+------+------+------+------+--------|
  * | Tab    |   B  |   É  |   P  |   O  |   È  |      |           |      |   ^  |   V  |   D  |   L  |   J  |   Z    |
@@ -23,14 +23,14 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  * |--------+------+------+------+------+------|      |           |      |------+------+------+------+------+--------|
  * | LShift |   À  |   Y  |   X  |   .  |   K  |      |           |      |   '  |   Q  |   G  |   H  |   F  | RShift |
  * `--------+------+------+------+------+-------------'           `-------------+------+------+------+------+--------'
- *   | LCtrl|      |      | LGui | LAlt |                                       | RAlt | RGui | CMenu|      |RCtrl |
+ *   | LCtrl|   Ê  |      | LGui | LAlt |                                       | RAlt | RGui | CMenu|   ç  |RCtrl |
  *   `----------------------------------'                                       `----------------------------------'
  *                                        ,-------------.       ,-------------.
  *                                        | Space|      |       | Bksp |Enter |
  *                                 ,------|------|------|       |------+--------+------.
- *                                 | Space|      |      |       |      | Enter | BSpace|
+ *                                 | Space|      |      |       |      | Enter | BSpace|
  *                                 |      |      |------|       |------|       |       |
- *                                 | LCtrl| ~L3  |      |       | Del  |   ~L2 |  ~L1  |
+ *                                 | ~L1  | LCtrl|      |       | Del  |   ~L2 |  ~L3  |
  *                                 `--------------------'       `----------------------'
  */
 
@@ -41,19 +41,19 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     BP_W,      BP_A,    BP_U,    BP_I,    BP_E,    BP_COMM,
     KC_LSHIFT, BP_AGRV, BP_Y,    BP_X,    BP_DOT,  BP_K,    ___,
     KC_LCTRL,  BP_ECRC, ___,     KC_LGUI, KC_LALT,
-                                                            KC_SPACE, ___,
-                                                                 ___,
-                                          LCTL_T(KC_SPACE), LT(3, KC_NO), ___,
+                                                           KC_SPACE,        ___,
+                                                                            ___,
+                                          LT(1, KC_SPACE), LCTL_T(KC_NO), ___,
 
     /* right hand */
         BP_PERC, BP_AT,   BP_PLUS, BP_MINS, BP_SLSH, BP_ASTR, BP_EQL,
         ___,     BP_DCRC, BP_V,    BP_D,    BP_L,    BP_J,    BP_Z,
                  BP_C,    BP_T,    BP_S,    BP_R,    BP_N,    BP_M,
         ___,     BP_APOS, BP_Q,    BP_G,    BP_H,    BP_F,    KC_RSHIFT,
-                          KC_RALT, KC_RGUI, KC_MENU, ___,     KC_RCTRL,
+                          KC_RALT, KC_RGUI, KC_MENU, BP_CCED, KC_RCTRL,
     KC_BSPACE, KC_ENTER,
     ___,
-    KC_DEL,    LT(2, KC_ENTER), LT(1, KC_BSPACE)),
+    KC_DEL,    LT(2, KC_ENTER), LT(3, KC_BSPACE)),
 
 
 
@@ -66,7 +66,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  * |--------+------+------+------+------+------|      |           |      |------+------+------+------+------+--------|
  * |        |  *   |  &   |  -   |  /   |  ;   |------|           |------|  =   |  (   |  )   |  <   |   >  |        |
  * |--------+------+------+------+------+------|      |           |      |------+------+------+------+------+--------|
- * |        |  \   |  %   |  +   |  :   |  _   |      |           |      |  `   |  {   |  }   |      |      |        |
+ * |        |  \   |  %   |  +   |  :   |  ~   |      |           |      |  `   |  {   |  }   |      |      |        |
  * `--------+------+------+------+------+-------------'           `-------------+------+------+------+------+--------'
  *   |      |      |      |      |      |                                       |      |      |      |      |      |
  *   `----------------------------------'                                       `----------------------------------'
@@ -82,7 +82,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
       ___, ___,     ___,     ___,      ___,      ___,     ___,
       ___, ___,     BP_AT,   BP_CIRC,  BP_DLR,   BP_PIPE, ___,
       ___, BP_ASTR, BP_AMPR, BP_MINUS, BP_SLASH, BP_SCLN,
-      ___, BP_BSLS, BP_PERC, BP_PLUS,  BP_COLN,  BP_UNDS, ___,
+      ___, BP_BSLS, BP_PERC, BP_PLUS,  BP_COLN,  BP_TILD, ___,
       ___, ___,     ___,     ___,      ___,
                                                  ___,     ___,
                                                           ___,

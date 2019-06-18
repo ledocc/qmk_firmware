@@ -5,3 +5,7 @@
 #undef TAPPING_TERM
 #define TAPPING_TERM 200
 
+#ifdef DEBOUNCE
+#error DEBOUNCE already define
+#endif
+#define DEBOUNCE 50
