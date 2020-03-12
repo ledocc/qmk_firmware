@@ -28,9 +28,9 @@ s * ,--------------------------------------------------.           ,------------
  *                                        ,-------------.       ,-------------.
  *                                        | Space|      |       | Bksp |Enter |
  *                                 ,------|------|------|       |------+--------+------.
- *                                 | Space|      |      |       |      | Enter | BSpace|
+ *                                 | Space|      |      |       |      | Enter | BSpace|
  *                                 |      |      |------|       |------|       |       |
- *                                 | ~L1  | LCtrl|      |       | Del  |   ~L2 |  ~L3  |
+ *                                 | ~L1  | LCtrl|LShift|       | Del  |   ~L2 |  ~L3  |
  *                                 `--------------------'       `----------------------'
  */
 
@@ -43,7 +43,7 @@ s * ,--------------------------------------------------.           ,------------
     KC_LCTRL,  BP_ECRC, ___,     KC_LGUI, KC_LALT,
                                                            KC_SPACE,        ___,
                                                                             ___,
-                                          LT(1, KC_SPACE), LCTL_T(KC_NO), ___,
+                                          LT(1, KC_SPACE), LCTL_T(KC_NO), KC_LSHIFT,
 
     /* right hand */
         BP_PERC, BP_AT,   BP_PLUS, BP_MINS, BP_SLSH, BP_ASTR, BP_EQL,
